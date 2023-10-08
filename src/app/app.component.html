@@ -1,0 +1,12 @@
+  
+  <h1 style="text-align: center;">Dynamic Component Demo</h1>
+  <br>
+  <div class="container">  
+    <div class="my-buttons"> 
+      <button  (click)="showDynamicComponent()">Show component</button>
+      <button  (click)="removeDynamicComponent()">Remove component </button>
+    </div>
+    <div class="centered-element">
+      <ng-template #dynamic ></ng-template>
+    </div>
+  </div>
