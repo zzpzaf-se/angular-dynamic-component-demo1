@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'my-dynamic-comp',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-dynamic.component.css']
 })
 export class MyDynamicComponent {
-  public subTitle: string = "My favorite flower";
+  @Input() public subTitle!: string;
+  //public subTitle: string = "My favorite flower";
 }
