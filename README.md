@@ -7,11 +7,10 @@ The 1st one is the known 'AppComponent' created by default from Angular CLI duri
 
 - In the 1st commit a template variable is used as an entry-point (or anchor-point). 
 - In the 2nd commit a helper directive is used to apply the dynamic component.
+![image_info](./src/assets/GIF1.gif)
 
-![image_info](./src/assets/GIF(1186x942).gif)
-
-
-
+- In the 3rd commit the @Output decorator has been used to pass data up from the dynamic component to host/parent component.
+![image_info](./src/assets/GIF2.gif)
 
 ## Default Instructions
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.

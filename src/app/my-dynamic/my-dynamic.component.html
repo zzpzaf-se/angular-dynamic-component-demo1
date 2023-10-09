@@ -2,7 +2,7 @@
 <div class="img-container">
     <img 
         src='https://images.pexels.com/photos/7293039/pexels-photo-7293039.jpeg?auto=compress&cs=tinysrgb&h=750&w=350'
-        alt='flower-image'>
+        alt='flower-image' (mouseenter)="dynEevent.emit(dynMessage)"  (mouseleave)="dynEevent.emit('')" >
     <dIv class="tcenter">   
         {{subTitle}}    
     </dIv>

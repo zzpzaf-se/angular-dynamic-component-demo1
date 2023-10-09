@@ -28,3 +28,17 @@
     background-color:darkblue;
     color: aliceblue;
   }
+
+  .msg-container {
+    display: flex;
+    flex-direction:row ;
+    margin-inline-start: 25%;
+    position: absolute;
+    bottom: 5%;
+    width: 50%;
+    padding:2%;
+    border: dashed darkblue;
+    align-items: center;
+    justify-content:center ;
+    text-align: center;
+  }

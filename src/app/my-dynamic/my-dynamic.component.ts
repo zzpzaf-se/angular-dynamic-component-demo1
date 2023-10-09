@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'my-dynamic-comp',
@@ -7,5 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class MyDynamicComponent {
   @Input() public subTitle!: string;
+  @Output() dynEevent = new EventEmitter<string>();
+
+  public dynMessage: string = "Mouse is inside image area!";
+
   //public subTitle: string = "My favorite flower";
+  
 }

@@ -17,6 +17,8 @@ export class AppComponent implements OnInit{
   private viewRef!: ViewContainerRef;
   private componentRef!: ComponentRef<any>;
 
+  public msg:string ="";
+
   ngOnInit(): void {
     console.log(">===>> " + this.title);
     this.viewRef = this.adDynamic.viewContainerRef;
@@ -27,10 +29,12 @@ export class AppComponent implements OnInit{
     this.viewRef.clear();
     this.componentRef = this.viewRef.createComponent(MyDynamicComponent); 
     this.componentRef.instance.subTitle = "My most-liked rose";
+    this.componentRef.instance.dynEevent.subscribe((msg: string) => this.msg = msg);
   }
 
   removeDynamicComponent(): void {
     this.viewRef.clear();
+    this.msg = "";
   }
 
 }
