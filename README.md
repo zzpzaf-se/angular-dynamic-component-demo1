@@ -7,10 +7,17 @@ The 1st one is the known 'AppComponent' created by default from Angular CLI duri
 
 - In the 1st commit a template variable is used as an entry-point (or anchor-point). 
 - In the 2nd commit a helper directive is used to apply the dynamic component.
+
 ![image_info](./src/assets/GIF1.gif)
 
 - In the 3rd commit the @Output decorator has been used to pass data up from the dynamic component to host/parent component.
+
 ![image_info](./src/assets/GIF2.gif)
+
+- In the 4th and 5th commit dynamic component(s) became almost totally unknown to the hosting component. A factory component service is used to return the appropriate/selected component to the helper directive on the basis of a string token provided. The only piece of information that is still needed in the hosting component is the emitted event of mouse hovering over the component, that is used from the hosting component.
+
+![image_info](./src/assets/GIF3.gif)
+
 
 ## Default Instructions
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.

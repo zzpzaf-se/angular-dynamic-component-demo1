@@ -1,0 +1,13 @@
+
+.tcenter {
+    text-align: center;
+  }
+
+
+  .my-container {
+    display: flex;
+    flex-direction: column;
+    padding:2%;
+    border:solid;
+    align-items: center;
+  }

@@ -29,6 +29,15 @@
     color: aliceblue;
   }
 
+  .my-input {
+    margin-top: 2%;
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
   .msg-container {
     display: flex;
     flex-direction:row ;

@@ -3,7 +3,8 @@
   <br>
   <div class="container">  
     <div class="my-buttons"> 
-      <button  (click)="showDynamicComponent()">Show component</button>
+      <button  (click)="showDynamicComponent(input.value)">Show component</button>
+      <input class="my-input" type="text" placeholder="Enter Token" #input/>
       <button  (click)="removeDynamicComponent()">Remove component </button>
     </div>
     <div class="centered-element">

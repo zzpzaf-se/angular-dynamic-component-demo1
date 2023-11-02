@@ -1,5 +1,4 @@
-import { Component, ComponentRef, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
-import { MyDynamicComponent } from './my-dynamic/my-dynamic.component';
+import { Component, ComponentRef, OnInit, ViewChild } from '@angular/core';
 import { AdDynDirective } from './ad-dyn.directive';
 
 
@@ -30,12 +29,13 @@ export class AppComponent implements OnInit{
   }
 
 
-  showDynamicComponent(): void {
+  showDynamicComponent(token: string): void {
     this.adDynamic.viewContainerRef.clear();
     // this.componentRef = this.viewRef.createComponent(MyDynamicComponent); 
-    this.componentRef = this.adDynamic.createMyDynamicComponent() 
-
-    this.componentRef.instance.subTitle = "My most-liked rose";
+    if (token == 'dyn1' || token == 'dyn2') {
+      this.componentRef = this.adDynamic.createMyDynamicComponent(token) 
+    }
+    //this.componentRef.instance.subTitle = "My most-liked rose";
     this.componentRef.instance.dynEevent.subscribe((msg: string) => this.msg = msg);
   }
 
