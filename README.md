@@ -18,6 +18,15 @@ The 1st one is the known 'AppComponent' created by default from Angular CLI duri
 
 ![image_info](./src/assets/GIF3.gif)
 
+- In the 6th commit dynamic component(s), as well as the helper directive became totally unknown to the host component. In other words the host component is absolutely decoupled and independent feom them. This is achieved by using the @Input @Output decorators within our helper directive and then applying it to the host component template, using property binding and event binding syntax respectively.
+```
+    <ng-container
+      adDynamic
+      [inVal]="input.value"
+      (inAreaMsg)="dynCompMsg($event)" >
+    </ng-container>
+```
+![image_info](./src/assets/GIF4.gif)
 
 ## Default Instructions
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.

@@ -1,20 +1,18 @@
-  
-  <h1 style="text-align: center;">Dynamic Component Demo</h1>
-  <br>
-  <div class="container">  
-    <div class="my-buttons"> 
-      <button  (click)="showDynamicComponent(input.value)">Show component</button>
-      <input class="my-input" type="text" placeholder="Enter Token" #input/>
-      <button  (click)="removeDynamicComponent()">Remove component </button>
-    </div>
-    <div class="centered-element">
-      <!-- <ng-template #dynamic ></ng-template> -->
-      <!-- <ng-container #dynamic ></ng-container> -->
-      <!-- <ng-template adDynamic ></ng-template> -->
-      <ng-container adDynamic ></ng-container>
-
-    </div>
-    <div class="msg-container">
-      {{msg}}
-    </div>     
+<h1 style="text-align: center">Dynamic Component Demo</h1>
+<br />
+<div class="container">
+  <div class="my-buttons">
+    <input class="my-input" type="text" placeholder="Enter Token" #input />
+    <button (click)="showDynamicContent()">Submit</button>
   </div>
+  <div class="centered-element">
+    <ng-container
+      adDynamic
+      [inVal]="input.value"
+      (inAreaMsg)="dynCompMsg($event)"
+    ></ng-container>
+  </div>
+  <div class="msg-container">
+    {{ msg }}
+  </div>
+</div>
